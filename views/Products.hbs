@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css-file/Login.css" />
+    <link rel="stylesheet" href="/css-file/Product.css" />
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="header">
+            <div class="logo-icon">
+                <img class="sbkaBazaarLogo" src="/images/logo.png" alt="Sabka Bazaar Logo" />
+            </div>
+            <div class="flow-links">
+                <ul>
+                    <li><a href=".">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                </ul>
+            </div>
+            <div class="right-links">
+                <ul>
+                    <li><a href="/login">SignIn</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <img class="cart-dimension" src="/images/cart.svg" alt="cart image" />
+                    <span class="number-of-items">0 items</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="Category-sidenav">
+            <aside class="sidebar">
+                <ul class="menu">
+                    <li class='menu-item'><a href="#Fruits" id="Fruits" onclick="showData()">Fruits & Vegetables</a>
+                    </li>
+                    <li class='menu-item'><a href="#Bakery" id="Bakery">Bakery Cakes and Dairy</a></li>
+                    <li class='menu-item'><a href="#Beverages" id="Beverages">Beverages</a></li>
+                    <li class='menu-item'><a href="#Beauty" id="Beauty">Beauty and Hygiene</a></li>
+                    <li class='menu-item'><a href="#Baby" id="Baby">Baby Care</a></li>
+                </ul>
+            </aside>
+
+        </div>
+        <main class="content-block">
+            <div id="Fruits">
+                <span>
+                    <div class="content-item">
+                        <img src="/images/products/fruit-n-veg/apple.jpg" alt="apple" />
+                        <div>
+                            <div>Descriptiondfvgdsfdsgdsgfdsgg</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/fruit-n-veg/capsicum-green.jpg" alt="capsicum-green" />
+                        <div>
+                            <div>Description</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/fruit-n-veg/kiwi-green.jpg" alt="kiwi" />
+                        <div>
+                            <div>Description</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/fruit-n-veg/pomegrante.jpg" alt="anar" />
+                        <div>
+                            <div>Description</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/fruit-n-veg/tomato.jpg" alt="tomato" />
+                        <div>
+                            <div>Descriptiondfvgdsfdsgdsgfdsgg</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div id="Baby">
+                <span>
+                    <div class="content-item">
+                        <img src="/images/products/baby/baby-dove.jpg" alt="apple" />
+                        <div>
+                            <div>Descriptiondfvgdsfdsgdsgfdsgg</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/baby/pampers.jpg" alt="capsicum-green" />
+                        <div>
+                            <div>Description</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/baby/mamy.jpg" alt="kiwi" />
+                        <div>
+                            <div>Description</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/baby/cerelac.jpg" alt="anar" />
+                        <div>
+                            <div>Description</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+                <span>
+                    <div class='content-item'>
+                        <img src="/images/products/baby/wipes.jpg" alt="tomato" />
+                        <div>
+                            <div>Descriptiondfvgdsfdsgdsgfdsgg</div>
+                            <button value="addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </main>
+    </div>
+
+    <div class="footer-container">
+        <p class="footer-message">Copyright @2010-2021 Sabka bazaar Grocerry</p>
+    </div>
+    <script>
+
+        var sidebar = document.getElementsByClassName("sidebar")[0];
+        console.log('document.getElementsByTagName("ul")', document.getElementsByTagName("ul"));
+
+        // Add click listeners to the menu conson the sidebar
+        document.getElementsByTagName("ul")[2].addEventListener("onclick", function (evt) {
+            // when a menu item is clicked hide the sidebar by unchecking the input
+            aler('Hi');
+            function handleTransitionEnd(transitionEvent) {
+
+                // show the correct content based on the target of the menu item
+                // first hide everything
+                var contentDivs = document.querySelectorAll("main div");
+                console.log('contentDivs', contentDivs);
+                for (var i = 0; i < contentDivs.length; i++) {
+                    contentDivs[i].style.display = "none";
+                }
+
+                // show the correct div
+                var contentId = evt.srcElement.hash;
+                alert(contentId);
+                var contentDiv = document.getElementById(contentId.substr(1));
+                contentDiv.style.display = "inherit";
+
+                // remove listener
+                sidebar.removeEventListener("transitionend", handleTransitionEnd);
+            }
+
+            sidebar.addEventListener("transitionend", handleTransitionEnd);
+        });
+
+    </script>
+</body>
+
+</html>
