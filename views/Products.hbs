@@ -16,7 +16,7 @@
             <div class="logo-icon">
                 <img class="sbkaBazaarLogo" src="/images/logo.png" alt="Sabka Bazaar Logo" />
             </div>
-            <div class="flow-links">
+            <div class="display-desktop flow-links">
                 <ul>
                     <li><a href=".">Home</a></li>
                     <li><a href="/products">Products</a></li>
@@ -152,7 +152,7 @@
     <script>
 
         var sidebar = document.getElementsByClassName("sidebar")[0];
-        console.log('document.getElementsByTagName("ul")', document.getElementsByTagName("ul"));
+        //console.log('document.getElementsByTagName("ul")', document.getElementsByTagName("ul"));
 
         // Add click listeners to the menu conson the sidebar
         document.getElementsByTagName("ul")[2].addEventListener("onclick", function (evt) {
@@ -163,7 +163,7 @@
                 // show the correct content based on the target of the menu item
                 // first hide everything
                 var contentDivs = document.querySelectorAll("main div");
-                console.log('contentDivs', contentDivs);
+                //console.log('contentDivs', contentDivs);
                 for (var i = 0; i < contentDivs.length; i++) {
                     contentDivs[i].style.display = "none";
                 }
