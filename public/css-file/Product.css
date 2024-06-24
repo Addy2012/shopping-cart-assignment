@@ -49,3 +49,14 @@
 @media screen and (max-height: 450px) {
   .Category-sidenav a {
     font-size: 18px; } }
+@media only screen and (max-device-width: 938px){
+  .display-desktop {
+      display: none;
+  }
+}
+@media screen and (max-width: 902px){
+
+  .right-links ul{
+    display: block;
+  }
+}

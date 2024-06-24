@@ -69,7 +69,11 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); }
 
 .product:nth-child(even) .product-image, .product:nth-child(even) .product-details {
-  float: right; }
+  float: right; 
+}
+.product:nth-child(odd) .product-image ,.product:nth-child(odd) .product-details {
+	float: left;
+}
 
 .product-image {
   width: 20%;
@@ -128,10 +132,15 @@ button.slick-next.slick-arrow {
   z-index: 1; }
 
 .footer-container {
-  margin-top: 70%;
-  background-color: gray;
-  height: 37px;
-  position: relative; }
+
+	background-color: gray;
+    /* height: 37px; */
+    position: relative;
+    clear: both;
+    position: relative;
+    height: 41px;
+    padding-top: -2px;
+    margin-top: -200px; }
 
 .footer-message {
   margin-left: 8%;
@@ -141,3 +150,20 @@ button.slick-next.slick-arrow {
   left: 12%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+  @media only screen and (max-device-width: 938px){
+    .display-desktop {
+        display: none;
+    }
+  }
+  @media screen and (max-width: 902px){
+    .cart-icon{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: beige;
+      width: 45%;
+      height: auto;
+    }
+    .right-links ul{
+      display: block;
+    }
+  }

@@ -129,3 +129,12 @@ input:valid + label {
   font-size: 14px;
   top: -24px;
   color: #0085ddf3; }
+  
+@media screen and (max-width: 902px){
+  .flow-links ul{
+    display: block;
+  }
+  .right-links ul{
+    display: block;
+  }
+}
